@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login Page</title>
+</head>
+
+<body>
+
+
+<br><br><br><br><br><br><br>
+<div>
+    login page
+
+    <div>
+        <form th:action="@{/login}" method="POST"  th:object="${loginform}">
+
+
+            <div class="form-group">
+                <label class="control-label" for="email"> Email</label>
+                <input id="email" class="form-control" required autofocus="autofocus" th:field="*{username}"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="password">Password </label>
+                <input id="password" class="form-control" type="password" required autofocus="autofocus" th:field="*{password}"/>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">
+                    Log In
+                </button>
+<!--                <span>New User? <a href="/"-->
+<!--                                   th:href="@{/registration}">Register-->
+<!--                                here</a></span>-->
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
